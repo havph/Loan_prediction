@@ -82,6 +82,8 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 ## **4.1. Phân tích mối quan hệ giữa các biến (Correlation Heatmap)**
 
 - **Mục tiêu**: Xác định biến nào có ảnh hưởng mạnh đến quyết định chấp thuận khoản vay.
+![Tên ảnh](image/1.png)
+
 - **Kết quả chính**:
   - **Credit_History** có mối tương quan mạnh nhất với **Loan_Status**, cho thấy lịch sử tín dụng là yếu tố quan trọng nhất.
   - **LoanAmount** và **ApplicantIncome** có tương quan trung bình, hợp lý vì thu nhập cao hơn thường liên quan đến khoản vay lớn hơn.
