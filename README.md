@@ -141,7 +141,8 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 ### **4. Biến Self_Employed**
 - **Mục tiêu**: Xem xét ảnh hưởng của nghề nghiệp tự doanh đến tỷ lệ chấp thuận khoản vay.
 
-![Tên ảnh](image/99.png)
+<img src="image/99.png" width="50%">
+
 
 
 - **Kết quả**:
