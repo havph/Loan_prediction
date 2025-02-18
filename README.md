@@ -76,6 +76,6 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 - **Chuẩn hóa dữ liệu số (Numerical)**
   - Dùng **MinMaxScaler** để đưa các giá trị về phạm vi (0,1) giúp mô hình hoạt động hiệu quả hơn.
 
-## **3. Kết quả**
-- Dữ liệu đã được **làm sạch và chuẩn hóa**, sẵn sàng để xây dựng mô hình dự đoán.
+==> Dữ liệu đã được **làm sạch và chuẩn hóa**, sẵn sàng để xây dựng mô hình dự đoán.
+
 
