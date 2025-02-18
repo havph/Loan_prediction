@@ -10,20 +10,16 @@
 
 Dream Housing Finance là một công ty tài chính chuyên cung cấp các khoản vay mua nhà. Công ty hoạt động trên khắp các khu vực đô thị, bán đô thị và nông thôn. Hiện tại, quy trình xét duyệt khoản vay dựa vào nhân viên và mất nhiều thời gian. Vì vậy, mục tiêu là tự động hóa quy trình xét duyệt bằng cách xây dựng một mô hình dự đoán khả năng khách hàng được chấp thuận khoản vay. Điều này sẽ giúp công ty tập trung vào các khách hàng tiềm năng.
 
-## Project Structure
+## Workflow stages
+Solution được thực hiện qua 7 bước sau:
 
-```
-├── LICENSE
-├── README.md           <- Project documentation.
-├── notebooks           <- Jupyter notebooks containing data analysis and model training.
-│   └── credit_risk.ipynb  <- Main notebook with data preprocessing and model training.
-├── reports            <- Final analysis report in PDF format.
-│   └── Report.pdf     <- Full research and results.
-├── src                <- Source code folder.
-│   ├── data           <- Datasets used for training and testing.
-│   ├── model          <- Trained models and scripts.
-│   └── utils          <- Helper functions and utilities.
-```
+1. Problem definition.
+2. Acquire data.
+3. Wrangle, prepare, cleanse the data.
+4. Analyze, identify patterns, and explore the data.
+5. Model, predict and solve the problem.
+6. Visualize, report, and present the problem solving steps and final solution.
+7. Supply or submit the results.
 
 ## Dataset Information
 
@@ -36,74 +32,22 @@ Attribute Information:
 3. Married: Applicant married status (Y/N)
 4. Dependents: Number of dependents
 5. Education: Applicant Education (Graduate/ Under Graduate)
-Self_Employed: Self-employed (Y/N)
-ApplicantIncome: Applicant income
-CoapplicantIncome: Coapplicant income
-LoanAmount: Loan amount in thousands
-Loan_Amount_Term: Term of a loan in months
-Credit_History: credit history meets guidelines
-Property_Area: Urban / Semi-Urban / Rural
-Loan_Status: Loan approved (Y/N)
-## Background Information
+6. Self_Employed: Self-employed (Y/N)
+7. ApplicantIncome: Applicant income
+8. CoapplicantIncome: Coapplicant income
+9. LoanAmount: Loan amount in thousands
+10. Loan_Amount_Term: Term of a loan in months
+11. Credit_History: credit history meets guidelines
+12. Property_Area: Urban / Semi-Urban / Rural
+13. Loan_Status: Loan approved (Y/N)
+    
+# **1. Problem Definition**
+Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản vay dựa trên thông tin khách hàng. Mục tiêu của bài toán là xây dựng một mô hình dự đoán xem khách hàng có được duyệt khoản vay hay không.
 
-Credit risk assessment is a critical aspect of banking and financial management. Machine learning models can enhance the accuracy of risk classification, helping financial institutions:
+**Xác định biến mục tiêu:**
 
-- Reduce the risk of bad debts.
-- Improve loan approval efficiency.
-- Enhance customer relationship management.
 
-By leveraging advanced machine learning techniques, this project aims to create a robust credit classification system that enables better decision-making.
+- **Biến mục tiêu (target variable):** là biến muốn dự đoán hoặc giải thích dựa trên các biến đầu vào (biến độc lập hoặc đặc trưng - features).
+- Biến mục tiêu của mô hình dự đoán nhóm xây dựng là: **Loan_Status**
 
-## Objective
 
-The main goal of this project is to develop a machine learning model capable of classifying customers into different credit risk categories. The model will help financial institutions mitigate risks by identifying potential defaulters early.
-
-## Approach
-
-1. **Data Preprocessing**:
-   - Handling missing values and outliers.
-   - Encoding categorical variables.
-   - Feature scaling and transformation.
-
-2. **Feature Engineering**:
-   - Creating interaction terms between key financial indicators.
-   - Generating new features from transaction history.
-   - Implementing statistical transformations.
-
-3. **Machine Learning Models**:
-   - Logistic Regression
-   - Decision Tree
-   - Random Forest
-   - Support Vector Machine (SVM)
-   - Artificial Neural Networks (ANN)
-
-4. **Performance Evaluation**:
-   - Using metrics such as AUC-ROC, Precision, Recall, and F1-Score.
-   - Conducting cross-validation and hyperparameter tuning.
-
-5. **Model Optimization**:
-   - Adjusting classification thresholds for optimal recall.
-   - Implementing SMOTE for handling imbalanced datasets.
-   - Fine-tuning hyperparameters.
-
-## Results & Findings
-
-- **Best Model**: Random Forest achieved the highest accuracy with an F1-score of **88%**.
-- **Key Insights**:
-  - Transaction history is a strong predictor of credit risk.
-  - Customers with lower income and higher loan amounts have a higher probability of default.
-  - Feature interactions significantly improved model performance.
-
-## Future Work
-
-- Implementing deep learning models for further improvements.
-- Exploring alternative datasets for broader risk assessment.
-- Integrating the model into a real-time credit scoring system.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Author
-
-- **Project Contributor: [Your Name]**
