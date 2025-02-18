@@ -31,11 +31,11 @@ Bộ dữ liệu chứa các thông tin nhân khẩu học và lịch sử vay v
 
 Attribute Information:
 
-- 1. Loan_ID: Unique Loan ID
-Gender: Male/ Female
-Married: Applicant married status (Y/N)
-Dependents: Number of dependents
-Education: Applicant Education (Graduate/ Under Graduate)
+1. Loan_ID: Unique Loan ID
+2. Gender: Male/ Female
+3. Married: Applicant married status (Y/N)
+4. Dependents: Number of dependents
+5. Education: Applicant Education (Graduate/ Under Graduate)
 Self_Employed: Self-employed (Y/N)
 ApplicantIncome: Applicant income
 CoapplicantIncome: Coapplicant income
