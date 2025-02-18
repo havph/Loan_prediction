@@ -82,6 +82,7 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 ## **4.1. Phân tích mối quan hệ giữa các biến (Correlation Heatmap)**
 
 - **Mục tiêu**: Xác định biến nào có ảnh hưởng mạnh đến quyết định chấp thuận khoản vay.
+
 ![Tên ảnh](image/1.png)
 
 - **Kết quả chính**:
@@ -93,6 +94,9 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 
 ### **1. Biến nhân khẩu học (Demographic Variables)**
 - **Mục tiêu**: Kiểm tra xem giới tính, tình trạng hôn nhân và số người phụ thuộc ảnh hưởng thế nào đến quyết định vay.
+
+![Tên ảnh](image/2.png)
+
 - **Kết quả**:
   - **Married**: Người đã kết hôn có tỷ lệ được chấp thuận cao hơn.
   - **Dependents**: Nhóm không có người phụ thuộc có tỷ lệ chấp thuận cao nhất.
@@ -103,6 +107,9 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 
 ### **2. Biến tài chính (Financial Variables)**
 - **Mục tiêu**: Đánh giá thu nhập và số tiền vay có ảnh hưởng đến quyết định chấp thuận không.
+
+![Tên ảnh](image/3.png)
+
 - **Kết quả**:
   - **ApplicantIncome**: Thu nhập cao không đảm bảo được chấp thuận khoản vay, nhưng thu nhập trung bình có tỷ lệ chấp thuận cao hơn.
   - **LoanAmount**: Số tiền vay có ảnh hưởng nhưng có thể phụ thuộc vào lịch sử tín dụng.
@@ -113,6 +120,9 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 
 ### **3. Lịch sử tín dụng và thông tin khoản vay**
 - **Mục tiêu**: Xác định tác động của lịch sử tín dụng và thông tin khoản vay.
+
+![Tên ảnh](image/4.png)
+
 - **Kết quả**:
   - **Credit_History**:
     - Nhóm có lịch sử tín dụng tốt (**1.0**) có tỷ lệ chấp thuận rất cao.
@@ -130,6 +140,10 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 
 ### **4. Biến Self_Employed**
 - **Mục tiêu**: Xem xét ảnh hưởng của nghề nghiệp tự doanh đến tỷ lệ chấp thuận khoản vay.
+
+![Tên ảnh](image/99.png)
+
+
 - **Kết quả**:
   - **Không tự kinh doanh**: Chiếm đa số và có tỷ lệ được chấp thuận cao hơn.
   - **Tự kinh doanh**: Tỷ lệ chấp thuận thấp hơn, có thể do đánh giá rủi ro cao hơn.
@@ -197,6 +211,9 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 
 - **Thực hiện 5-fold cross-validation** để đánh giá 7 mô hình:
   - **Tiêu chí đánh giá:** F1-Score và ROC-AUC.
+  
+![Tên ảnh](image/5.png)
+
   - **Kết quả:**
     - **F1-Score cao nhất:** **SVM (0.861)**
     - **ROC-AUC cao nhất:** **Random Forest (0.776)**
@@ -215,6 +232,8 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
   - **Recall lớp "Not Approved"** cải thiện rõ rệt.
 
 ## **5.8. Đánh giá trên tập test (Final Model Evaluation on Test Set)**
+
+![Tên ảnh](image/6.png)
 
 - **Kết quả trên tập test:**
   - **Accuracy:** 0.8415
