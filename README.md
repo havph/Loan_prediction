@@ -50,39 +50,32 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 - **Biến mục tiêu (target variable):** là biến muốn dự đoán hoặc giải thích dựa trên các biến đầu vào (biến độc lập hoặc đặc trưng - features).
 - Biến mục tiêu của mô hình dự đoán nhóm xây dựng là: **Loan_Status**
 
-# ** 2&3. XỬ LÝ DỮ LIỆU**
+# **2&3. XỬ LÝ DỮ LIỆU**
 
-## 1. Thu thập và tiền xử lý dữ liệu
+## **1. Thu thập và tiền xử lý dữ liệu**
+- **Nhập dữ liệu** từ file CSV chứa thông tin về các khoản vay.
+- **Chuyển đổi dữ liệu**: Đặt `Loan_ID` làm chỉ mục thay vì giữ nguyên dạng cột.
+- **Phân loại biến**:
+  - **Categorical (Phân loại)**:
+    - **Nominal (Không có thứ tự)**: Giới tính, tình trạng hôn nhân, nghề nghiệp tự do, khu vực tài sản, trạng thái khoản vay.
+    - **Ordinal (Có thứ tự)**: Trình độ học vấn, số lượng người phụ thuộc.
+  - **Numerical (Số liệu)**:
+    - **Continuous (Liên tục)**: Thu nhập của người vay, thu nhập của người đồng vay, số tiền vay.
+    - **Discrete (Rời rạc)**: Thời hạn vay, lịch sử tín dụng.
+- **Xử lý dữ liệu bị thiếu**:
+  - **Xác định các cột có giá trị NULL** và kiểm tra phân phối dữ liệu.
+  - **Điền dữ liệu thiếu**:
+    - Các biến phân loại được điền bằng **giá trị phổ biến nhất (mode)**.
+    - Các biến số được điền bằng **trung vị (median)** do không tuân theo phân phối chuẩn.
 
-- **Thay đổi tên cột** để thuận tiện cho việc xử lý.
-- **Lọc dữ liệu**: Loại bỏ các bản ghi không ghi nhận nợ, giữ lại **29.956 dòng** và **50 cột**.
-- **Mã hóa lại nhóm nợ**: Chuyển đổi nhóm nợ từ **5 mức** về **2 mức**:
-  - `0`: Nợ tốt.
-  - `1`: Nợ xấu.
+## **2. Làm sạch dữ liệu (Data Wrangling)**
+- **Xử lý dữ liệu phân loại (Categorical)**
+  - Chuyển đổi trạng thái khoản vay (`Loan_Status`) thành **0 và 1** (Từ chối/Chấp thuận).
+  - Mã hóa biến **giới tính, trình độ học vấn, tình trạng hôn nhân, nghề nghiệp tự do** thành nhị phân (0/1).
+  - Áp dụng **One-Hot Encoding** cho các biến có nhiều hơn hai giá trị (số người phụ thuộc, khu vực tài sản).
+- **Chuẩn hóa dữ liệu số (Numerical)**
+  - Dùng **MinMaxScaler** để đưa các giá trị về phạm vi (0,1) giúp mô hình hoạt động hiệu quả hơn.
 
-## 2. Phân tích và mô tả dữ liệu
-
-### Phân loại biến:
-- Phân loại biến:
-    - Categorical: Các biến phân loại (Nomial & Ordinal).
-    - Numerical: Chia thành biến liên tục (Continuous) và rời rạc (Discrete).
-- Kiểm tra dữ liệu bị thiếu (NULL):
-    - Các biến có >35% giá trị NULL được loại bỏ.
-    - Một số biến có NULL được thay thế bằng giá trị phổ biến hoặc điền giá trị hợp lý.
-
-### Kiểm tra dữ liệu bị thiếu (NULL):
-- Các biến có hơn **35% giá trị NULL** bị loại bỏ.
-- Một số biến có NULL được thay thế bằng **giá trị phổ biến (mode)** hoặc **giá trị hợp lý**.
-
-## 3. Làm sạch dữ liệu (Data Wrangling)
-- Xử lý giá trị không hợp lệ:
-    - Tính toán độ tuổi từ năm sinh và loại bỏ giá trị không hợp lệ (<18 hoặc >100 tuổi).
-- Xử lý dữ liệu bị thiếu:
-    - Điền giá trị NULL bằng mode (giá trị phổ biến nhất) theo nhóm tuổi & giới tính.
-    - Thay thế NULL bằng 0 cho các giao dịch không phát sinh trong tháng.
-    - Sử dụng KNN Imputer để điền dữ liệu thiếu cho các biến tài chính.
-- Xử lý ngoại lệ:
-    - Loại bỏ các giá trị âm trong tổng giao dịch và tổng số giao dịch tháng 3, tháng 6.
-- Chuẩn hóa dữ liệu:
-    - Dữ liệu dạng số đã có phân phối chuẩn, không cần biến đổi thêm.
+## **3. Kết quả**
+- Dữ liệu đã được **làm sạch và chuẩn hóa**, sẵn sàng để xây dựng mô hình dự đoán.
 
