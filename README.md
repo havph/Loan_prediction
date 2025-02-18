@@ -3,13 +3,12 @@
 ![Python](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
-## Problem Description
+## Challenge Description
 
-This project aims to classify credit risk based on financial transaction data. The objective is to develop a machine learning model that can accurately predict whether a customer belongs to a high-risk credit group or not, helping banks optimize their credit approval process and reduce potential bad debts.
+Dream Housing Finance là một công ty tài chính chuyên cung cấp các khoản vay mua nhà. Công ty hoạt động trên khắp các khu vực đô thị, bán đô thị và nông thôn. Hiện tại, quy trình xét duyệt khoản vay dựa vào nhân viên và mất nhiều thời gian. Vì vậy, mục tiêu là tự động hóa quy trình xét duyệt bằng cách xây dựng một mô hình dự đoán khả năng khách hàng được chấp thuận khoản vay. Điều này sẽ giúp công ty tập trung vào các khách hàng tiềm năng.
 
 ## Project Structure
 
@@ -28,16 +27,23 @@ This project aims to classify credit risk based on financial transaction data. T
 
 ## Dataset Information
 
-The dataset consists of financial transactions and customer demographic information. It includes the following key columns:
+Bộ dữ liệu chứa các thông tin nhân khẩu học và lịch sử vay vốn của những khách hàng trước đây của công ty.
 
-- `customer_id`: Unique identifier for each customer.
-- `age`: Customer's age.
-- `income_level`: Categorized income level.
-- `loan_amount`: The total loan amount taken by the customer.
-- `transaction_history`: Records of past transactions.
-- `credit_score`: The customer's credit score.
-- `loan_status`: Binary label indicating good (0) or bad (1) credit status.
+Attribute Information:
 
+- 1. Loan_ID: Unique Loan ID
+Gender: Male/ Female
+Married: Applicant married status (Y/N)
+Dependents: Number of dependents
+Education: Applicant Education (Graduate/ Under Graduate)
+Self_Employed: Self-employed (Y/N)
+ApplicantIncome: Applicant income
+CoapplicantIncome: Coapplicant income
+LoanAmount: Loan amount in thousands
+Loan_Amount_Term: Term of a loan in months
+Credit_History: credit history meets guidelines
+Property_Area: Urban / Semi-Urban / Rural
+Loan_Status: Loan approved (Y/N)
 ## Background Information
 
 Credit risk assessment is a critical aspect of banking and financial management. Machine learning models can enhance the accuracy of risk classification, helping financial institutions:
