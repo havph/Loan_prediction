@@ -63,13 +63,12 @@ Dream Housing Finance muốn tự động hóa quy trình xét duyệt khoản v
 ## 2. Phân tích và mô tả dữ liệu
 
 ### Phân loại biến:
-- **Categorical (Biến phân loại)**:
-  - *Nomial* (Không thể sắp xếp thứ tự): `loc1`, `vn_mar`, `most_act_m21`, `most_act_j21`.
-  - *Ordinal* (Có thể sắp xếp thứ tự): `term_j21`.
-
-- **Numerical (Biến số học)**:
-  - *Continuous (Liên tục)*: `amt_w`, `max_amt_w`, `min_amt_w`, `amt_m`, `max_amt_m`, `min_amt_m`, `amt_3m`, `max_amt_3m`, `min_amt_3m`, `total_amt_m21`, `total_amt_j21`, `saving_m21_HS`, `saving_j21_HS`, `bal_j21`, `nom_int_j21`, `real_int_j21`.
-  - *Discrete (Rời rạc)*: `resid_p`, `resid_d`, `resid_w`, `most_act_m21_cnt`, `dist_pay_w`, `dist_trans_w`, `dist_ref_w`, `cnt_pay_w`, `dist_pay_m`, `dist_trans_m`, `dist_ref_m`, `cnt_pay_m`, `dist_pay_3m`, `dist_trans_3m`, `dist_ref_3m`, `cnt_pay_3m`, `total_act_m21`, `total_act_j21`, `total_login_m21_HS`, `total_login_j21_HS`, `total_savings_21_HS`, `rd_id`, `nhomno_j21`, `cat_j21`, `sub_prod_j21`, `sec_j21`, `prod_j21`.
+- Phân loại biến:
+    - Categorical: Các biến phân loại (Nomial & Ordinal).
+    - Numerical: Chia thành biến liên tục (Continuous) và rời rạc (Discrete).
+- Kiểm tra dữ liệu bị thiếu (NULL):
+    - Các biến có >35% giá trị NULL được loại bỏ.
+    - Một số biến có NULL được thay thế bằng giá trị phổ biến hoặc điền giá trị hợp lý.
 
 ### Kiểm tra dữ liệu bị thiếu (NULL):
 - Các biến có hơn **35% giá trị NULL** bị loại bỏ.
